@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    //This is a common mistake.  The function is called before the element exists.
+    myFunction();
+
+    function myFunction() {
+      document.getElementById("myDiv").innerHTML = "Hello, world!";
+    }
+  </script>
+</body>
+</html>
