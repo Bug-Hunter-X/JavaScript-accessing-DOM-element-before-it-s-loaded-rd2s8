@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    //Solution 1: Place the script at the end of the body
+    //This ensures the DOM is ready before the function is called.
+    // myFunction();
+
+    //Solution 2: Use DOMContentLoaded event
+    document.addEventListener("DOMContentLoaded", function(event) { 
+      myFunction();
+    });
+
+    function myFunction() {
+      document.getElementById("myDiv").innerHTML = "Hello, world!";
+    }
+  </script>
+</body>
+</html>
